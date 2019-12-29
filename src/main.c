@@ -3,7 +3,7 @@
 
 static void print_hello (GtkWidget *widget, gpointer data)
 {
-    g_print ("Hello World version %s\n", PROJECT_VERSION);
+    g_print ("Quitted %s version %s\n", PROJECT_NAME, PROJECT_VERSION);
 }
 
 static void activate (GtkApplication *app, gpointer user_data)
@@ -35,7 +35,7 @@ static void activate (GtkApplication *app, gpointer user_data)
     // button_box = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
     // gtk_container_add (GTK_CONTAINER (window), button_box);
 
-    button = gtk_button_new_with_label ("Hello World");
+    button = gtk_button_new_with_label ("Quit");
     g_signal_connect (button, "clicked", G_CALLBACK (print_hello), NULL);
     g_signal_connect_swapped (button, "clicked", G_CALLBACK (gtk_widget_destroy), window);
     gtk_container_add (GTK_CONTAINER (box1), button);
