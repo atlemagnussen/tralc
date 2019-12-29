@@ -1,0 +1,10 @@
+tralc
+*.o
+config.h
+
+build/
+Makefile
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+
