@@ -1,4 +1,5 @@
 tralc
+tralc-test
 *.o
 config.h
 
