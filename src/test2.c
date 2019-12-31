@@ -27,7 +27,7 @@ static gboolean on_draw_event(GtkWidget *widget, cairo_t *cr, gpointer user_data
 
 static void do_drawing(cairo_t *cr)
 {
-    cairo_set_source_rgba(cr, 0.2, 0.2, 0.2, 0.4);
+    cairo_set_source_rgba(cr, 0, 0, 0, 0.6);
     cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
     cairo_paint(cr);
 }

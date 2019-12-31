@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 # set the project name
-project(tralc LANGUAGES C VERSION "0.1.1")
+project(tralc LANGUAGES C VERSION "0.2.0")
 
 # Use the package PkgConfig to detect GTK+ headers/library files
 FIND_PACKAGE(PkgConfig REQUIRED)

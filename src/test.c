@@ -3,14 +3,6 @@
 #include <cairo.h>
 
 /*
- * This program shows you how to create semi-transparent windows,
- * without any of the historical screenshot hacks. It requires
- * a modern system, with a compositing manager. I use xcompmgr
- * and the nvidia drivers with RenderAccel, and it works well.
- *
- * I'll take you through each step as we go. Minimal GTK+ knowledge is
- * assumed.
- *
  * gcc alphademo.c -o alphademo $( pkg-config --cflags --libs gtk+-2.0 )
  * 
  * https://web.archive.org/web/20121027002505/http://plan99.net/~mike/files/alphademo.c
