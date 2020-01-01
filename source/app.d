@@ -4,6 +4,9 @@ import gtk.MainWindow;
 import gtk.Main;
 import gtk.Builder;
 import gtk.Window;
+import gtk.CssProvider;
+import gtk.Widget;
+import gtk.StyleContext;
 
 void main(string[] args)
 {
@@ -13,6 +16,12 @@ void main(string[] args)
 	builder.addFromFile("./source/ui/main.glade");
 	builder.connectSignals(null);
 	Window win = cast(Window) builder.getObject("MainWindow");
+
+	CssProvider css = new CssProvider();
+	css.loadFromPath("./source/ui/main.css");
+
+	StyleContext winStyleContext = win.getStyleContext();
+	winStyleContext.addProvider(css, 0);
 
 	win.showAll();
 	// MainWindow win = new MainWindow("hello world");
