@@ -1,5 +1,5 @@
 tralc
-tralc-test
+tralcd
 *.o
 config.h
 

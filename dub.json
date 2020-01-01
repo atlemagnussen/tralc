@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"atle"
+	],
+	"copyright": "Copyright © 2019, atle",
+	"dependencies": {
+		"gtk-d": "~>3.9.0"
+	},
+	"description": "my gtk transparent calculator",
+	"license": "GPL-2.0",
+	"name": "tralc"
+}
