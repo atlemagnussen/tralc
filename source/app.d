@@ -6,6 +6,7 @@ import gtk.Builder;
 import gtk.Window;
 import gtk.CssProvider;
 import gtk.Widget;
+import gtk.Button;
 import gtk.StyleContext;
 import gdk.Screen;
 
@@ -22,18 +23,21 @@ void main(string[] args)
 	css.loadFromPath("./source/ui/main.css");
 
 	Screen screen = Screen.getDefault();
-	StyleContext.addProviderForScreen(screen, css, 1);
+	StyleContext.addProviderForScreen(screen, css, 200);
 
-	//StyleContext winStyleContext = win.getStyleContext();
-	//winStyleContext.addProvider(css, 0);
+	StyleContext winStyleContext = win.getStyleContext();
+	winStyleContext.addProvider(css, 500);
+
+	Button btn = cast(Button) builder.getObject("ButtonQuit");
+	StyleContext btnStyleContext = btn.getStyleContext();
+	btnStyleContext.addProvider(css, 500);
 
 	win.showAll();
 	// MainWindow win = new MainWindow("hello world");
 	// win.setOpacity(0.2);
 	// win.setDefaultSize(200,200);
 	// win.add(new Label("hello label"));
-	// win.showAll();
-	
+
 	Main.run();
 }
 

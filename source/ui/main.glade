@@ -6,6 +6,9 @@
     <property name="name">MainWindowWidget</property>
     <property name="can_focus">False</property>
     <signal name="destroy" handler="on_destroy_main_window" swapped="no"/>
+    <style>
+      <class name="main-window"/>
+    </style>
     <child type="titlebar">
       <placeholder/>
     </child>
@@ -14,6 +17,7 @@
         <property name="name">MainLayoutWidget</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="valign">center</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkLabel" id="LabelTest">
@@ -53,36 +57,69 @@
           </packing>
         </child>
         <child>
-          <placeholder/>
-        </child>
-        <child>
-          <object class="GtkButton" id="ButtonQuit">
-            <property name="label" translatable="yes">button</property>
-            <property name="name">ButtonWidget</property>
+          <object class="GtkButtonBox" id="btnBox1">
+            <property name="name">BtnBox1</property>
             <property name="visible">True</property>
-            <property name="app_paintable">True</property>
-            <property name="can_focus">True</property>
-            <property name="can_default">True</property>
-            <property name="receives_default">True</property>
-            <property name="tooltip_text" translatable="yes">quit me</property>
-            <signal name="clicked" handler="on_button_clicked" swapped="no"/>
-            <style>
-              <class name="quit-button"/>
-            </style>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <property name="layout_style">start</property>
+            <child>
+              <object class="GtkButton" id="another-button">
+                <property name="label">gtk-disconnect</property>
+                <property name="name">anotherbutton</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="relief">half</property>
+                <property name="use_stock">True</property>
+                <style>
+                  <class name="button"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <object class="GtkButton" id="ButtonQuit">
+                <property name="label" translatable="yes">Quit</property>
+                <property name="name">ButtonWidget</property>
+                <property name="visible">True</property>
+                <property name="app_paintable">True</property>
+                <property name="can_focus">True</property>
+                <property name="can_default">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">quit me</property>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
+                <style>
+                  <class name="quit-button"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">4</property>
+            <property name="position">3</property>
           </packing>
+        </child>
+        <child>
+          <placeholder/>
         </child>
         <style>
           <class name="main-layout"/>
         </style>
       </object>
     </child>
-    <style>
-      <class name="main-window"/>
-    </style>
   </object>
 </interface>
