@@ -17,20 +17,21 @@ void main(string[] args)
 	Builder builder = new Builder();
 	builder.addFromFile("./source/ui/main.glade");
 	builder.connectSignals(null);
-	Window win = cast(Window) builder.getObject("MainWindow");
 
 	CssProvider css = new CssProvider();
 	css.loadFromPath("./source/ui/main.css");
-
 	Screen screen = Screen.getDefault();
-	StyleContext.addProviderForScreen(screen, css, 200);
+	StyleContext.addProviderForScreen(screen, css, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-	StyleContext winStyleContext = win.getStyleContext();
-	winStyleContext.addProvider(css, 500);
+	Window win = cast(Window) builder.getObject("MainWindow");
 
-	Button btn = cast(Button) builder.getObject("ButtonQuit");
-	StyleContext btnStyleContext = btn.getStyleContext();
-	btnStyleContext.addProvider(css, 500);
+
+	// StyleContext winStyleContext = win.getStyleContext();
+	// winStyleContext.addProvider(css, 500);
+
+	// Button btn = cast(Button) builder.getObject("ButtonQuit");
+	// StyleContext btnStyleContext = btn.getStyleContext();
+	// btnStyleContext.addProvider(css, 500);
 
 	win.showAll();
 	// MainWindow win = new MainWindow("hello world");
