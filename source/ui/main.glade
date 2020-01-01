@@ -5,9 +5,8 @@
   <object class="GtkWindow" id="MainWindow">
     <property name="name">MainWindowWidget</property>
     <property name="can_focus">False</property>
-    <property name="opacity">1</property>
     <signal name="destroy" handler="on_destroy_main_window" swapped="no"/>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child>
@@ -39,9 +38,13 @@
         </child>
         <child>
           <object class="GtkTextView" id="TextBox">
+            <property name="name">TextBoxInput</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="justification">center</property>
+            <style>
+              <class name="text-input"/>
+            </style>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -57,10 +60,15 @@
             <property name="label" translatable="yes">button</property>
             <property name="name">ButtonWidget</property>
             <property name="visible">True</property>
+            <property name="app_paintable">True</property>
             <property name="can_focus">True</property>
+            <property name="can_default">True</property>
             <property name="receives_default">True</property>
-            <property name="opacity">0.10000000000000001</property>
+            <property name="tooltip_text" translatable="yes">quit me</property>
             <signal name="clicked" handler="on_button_clicked" swapped="no"/>
+            <style>
+              <class name="quit-button"/>
+            </style>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -68,7 +76,13 @@
             <property name="position">4</property>
           </packing>
         </child>
+        <style>
+          <class name="main-layout"/>
+        </style>
       </object>
     </child>
+    <style>
+      <class name="main-window"/>
+    </style>
   </object>
 </interface>

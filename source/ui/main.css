@@ -1,3 +1,24 @@
-window {
+.main-window {
     background-color: #000;
+}
+.main-layout {
+    background-color: #333;
+}
+/* GtkButton GtkLabel {
+    background-color:green;
+    color: green;
+} */
+.text-input {
+    background-color: green;
+    color: green;
+}
+
+button {
+    border-image: none;
+    background-image: none;
+    background-color: green;
+}
+
+button:hover {
+    background-color: #3085a9;
 }

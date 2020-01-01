@@ -7,6 +7,7 @@ import gtk.Window;
 import gtk.CssProvider;
 import gtk.Widget;
 import gtk.StyleContext;
+import gdk.Screen;
 
 void main(string[] args)
 {
@@ -20,8 +21,11 @@ void main(string[] args)
 	CssProvider css = new CssProvider();
 	css.loadFromPath("./source/ui/main.css");
 
-	StyleContext winStyleContext = win.getStyleContext();
-	winStyleContext.addProvider(css, 0);
+	Screen screen = Screen.getDefault();
+	StyleContext.addProviderForScreen(screen, css, 1);
+
+	//StyleContext winStyleContext = win.getStyleContext();
+	//winStyleContext.addProvider(css, 0);
 
 	win.showAll();
 	// MainWindow win = new MainWindow("hello world");
@@ -29,6 +33,7 @@ void main(string[] args)
 	// win.setDefaultSize(200,200);
 	// win.add(new Label("hello label"));
 	// win.showAll();
+	
 	Main.run();
 }
 
@@ -40,4 +45,5 @@ extern(C) void on_destroy_main_window() {
 
 extern(C) void on_button_clicked() {
 	writeln("click");
+	Main.quit();
 }
