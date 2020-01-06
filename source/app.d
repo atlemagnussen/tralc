@@ -15,7 +15,7 @@ void main(string[] args)
 	Main.init(args);
 
 	Builder builder = new Builder();
-	builder.addFromFile("./source/ui/main.glade");
+	builder.addFromFile("./source/ui/test.glade");
 	builder.connectSignals(null);
 
 	CssProvider css = new CssProvider();
