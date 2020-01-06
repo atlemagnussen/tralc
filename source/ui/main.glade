@@ -103,7 +103,7 @@
                     <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">3</property>
+                        <property name="position">2</property>
                     </packing>
                 </child>
                 <child>
@@ -178,7 +178,7 @@
                 </child>
                 <child>
                     <object class="GtkButtonBox" id="btnBoxRow3">
-                        <property name="name">BtnBoxRow1</property>
+                        <property name="name">BtnBoxRow3</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="layout_style">start</property>
@@ -242,28 +242,59 @@
                     <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">3</property>
+                        <property name="position">4</property>
                     </packing>
                 </child>
                 <child>
-                    <object class="GtkButton" id="button-quit">
-                        <property name="label" translatable="yes">Quit</property>
-                        <property name="name">ButtonWidget</property>
+                    <object class="GtkButtonBox" id="btnBoxRow4">
+                        <property name="name">BtnBoxRow4</property>
                         <property name="visible">True</property>
-                        <property name="app_paintable">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="can_default">True</property>
-                        <property name="receives_default">True</property>
-                        <property name="tooltip_text" translatable="yes">quit me</property>
-                        <signal name="clicked" handler="on_button_clicked" swapped="no" />
-                        <style>
-                            <class name="quit-button" />
-                        </style>
+                        <property name="can_focus">False</property>
+                        <property name="layout_style">start</property>
+                        <child>
+                            <object class="GtkButton" id="button0">
+                                <property name="label">0</property>
+                                <property name="name">button-0</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="can_default">True</property>
+                                <property name="receives_default">True</property>
+                                <style>
+                                    <class name="num-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <object class="GtkButton" id="button-quit">
+                                <property name="label" translatable="yes">Quit</property>
+                                <property name="name">ButtonWidget</property>
+                                <property name="visible">True</property>
+                                <property name="app_paintable">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="can_default">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="tooltip_text" translatable="yes">quit me</property>
+                                <signal name="clicked" handler="on_button_clicked" swapped="no" />
+                                <style>
+                                    <class name="quit-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">3</property>
+                            </packing>
+                        </child>
                     </object>
                     <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">4</property>
+                        <property name="position">5</property>
                     </packing>
                 </child>
                 <style>
