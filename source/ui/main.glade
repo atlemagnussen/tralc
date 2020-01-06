@@ -1,125 +1,278 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Generated with glade 3.22.1 -->
 <interface>
-  <requires lib="gtk+" version="3.20"/>
-  <object class="GtkWindow" id="MainWindow">
-    <property name="name">MainWindowWidget</property>
-    <property name="can_focus">False</property>
-    <signal name="destroy" handler="on_destroy_main_window" swapped="no"/>
-    <style>
-      <class name="main-window"/>
-    </style>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
-    <child>
-      <object class="GtkBox" id="Layout">
-        <property name="name">MainLayoutWidget</property>
-        <property name="visible">True</property>
+    <requires lib="gtk+" version="3.20" />
+    <object class="GtkWindow" id="MainWindow">
+        <property name="name">MainWindowWidget</property>
         <property name="can_focus">False</property>
-        <property name="valign">center</property>
-        <property name="orientation">vertical</property>
-        <child>
-          <object class="GtkLabel" id="LabelTest">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">sdfsdfsdfsdfsdfsdfsdfsdfsdf</property>
-            <property name="justify">fill</property>
-            <attributes>
-              <attribute name="stretch" value="condensed"/>
-              <attribute name="scale" value="1"/>
-              <attribute name="foreground" value="#ffffffffffff"/>
-            </attributes>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">0</property>
-          </packing>
+        <signal name="destroy" handler="on_destroy_main_window" swapped="no" />
+        <child type="titlebar">
+            <placeholder />
         </child>
         <child>
-          <placeholder/>
-        </child>
-        <child>
-          <object class="GtkTextView" id="TextBox">
-            <property name="name">TextBoxInput</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="justification">center</property>
-            <style>
-              <class name="text-input"/>
-            </style>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButtonBox" id="btnBox1">
-            <property name="name">BtnBox1</property>
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
-            <property name="layout_style">start</property>
-            <child>
-              <object class="GtkButton" id="another-button">
-                <property name="label">gtk-disconnect</property>
-                <property name="name">anotherbutton</property>
+            <object class="GtkBox" id="Layout">
+                <property name="name">MainLayoutWidget</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="relief">half</property>
-                <property name="use_stock">True</property>
+                <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
+                <property name="baseline_position">top</property>
+                <child>
+                    <object class="GtkLabel" id="LabelTest">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">transparent calculator</property>
+                        <property name="justify">fill</property>
+                        <attributes>
+                            <attribute name="stretch" value="condensed" />
+                            <attribute name="scale" value="1" />
+                            <attribute name="foreground" value="#ffffffffffff" />
+                        </attributes>
+                    </object>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                    </packing>
+                </child>
+                <child>
+                    <placeholder />
+                </child>
+                <child>
+                    <object class="GtkButtonBox" id="btnBoxRow1">
+                        <property name="name">BtnBoxRow1</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="layout_style">start</property>
+                        <child>
+                            <object class="GtkButton" id="button-1">
+                                <property name="label">1</property>
+                                <property name="name">button1</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="relief">half</property>
+                                <property name="use_stock">True</property>
+                                <style>
+                                    <class name="button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <object class="GtkButton" id="button-2">
+                                <property name="label">2</property>
+                                <property name="name">button2</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="relief">half</property>
+                                <property name="use_stock">True</property>
+                                <style>
+                                    <class name="num-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <object class="GtkButton" id="button3">
+                                <property name="label">3</property>
+                                <property name="name">button-3</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="can_default">True</property>
+                                <property name="receives_default">True</property>
+                                <style>
+                                    <class name="num-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">3</property>
+                            </packing>
+                        </child>
+                    </object>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                    </packing>
+                </child>
+                <child>
+                    <object class="GtkButtonBox" id="btnBoxRow2">
+                        <property name="name">BtnBoxRow2</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="layout_style">start</property>
+                        <child>
+                            <object class="GtkButton" id="button-4">
+                                <property name="label">4</property>
+                                <property name="name">button4</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="relief">half</property>
+                                <property name="use_stock">True</property>
+                                <style>
+                                    <class name="num-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <object class="GtkButton" id="button-5">
+                                <property name="label">5</property>
+                                <property name="name">button5</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="relief">half</property>
+                                <property name="use_stock">True</property>
+                                <style>
+                                    <class name="num-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <object class="GtkButton" id="button-6">
+                                <property name="label">6</property>
+                                <property name="name">button6</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="relief">half</property>
+                                <property name="use_stock">True</property>
+                                <style>
+                                    <class name="num-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                            </packing>
+                        </child>
+                    </object>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                    </packing>
+                </child>
+                <child>
+                    <object class="GtkButtonBox" id="btnBoxRow3">
+                        <property name="name">BtnBoxRow1</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="layout_style">start</property>
+                        <child>
+                            <object class="GtkButton" id="button-7">
+                                <property name="label">7</property>
+                                <property name="name">button7</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="relief">half</property>
+                                <property name="use_stock">True</property>
+                                <style>
+                                    <class name="button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <object class="GtkButton" id="button-8">
+                                <property name="label">8</property>
+                                <property name="name">button8</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <property name="relief">half</property>
+                                <property name="use_stock">True</property>
+                                <style>
+                                    <class name="num-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <object class="GtkButton" id="button9">
+                                <property name="label">9</property>
+                                <property name="name">button-9</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="can_default">True</property>
+                                <property name="receives_default">True</property>
+                                <style>
+                                    <class name="num-button" />
+                                </style>
+                            </object>
+                            <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">3</property>
+                            </packing>
+                        </child>
+                    </object>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                    </packing>
+                </child>
+                <child>
+                    <object class="GtkButton" id="button-quit">
+                        <property name="label" translatable="yes">Quit</property>
+                        <property name="name">ButtonWidget</property>
+                        <property name="visible">True</property>
+                        <property name="app_paintable">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="can_default">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="tooltip_text" translatable="yes">quit me</property>
+                        <signal name="clicked" handler="on_button_clicked" swapped="no" />
+                        <style>
+                            <class name="quit-button" />
+                        </style>
+                    </object>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                    </packing>
+                </child>
                 <style>
-                  <class name="button"/>
+                    <class name="main-layout" />
                 </style>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <object class="GtkButton" id="ButtonQuit">
-                <property name="label" translatable="yes">Quit</property>
-                <property name="name">ButtonWidget</property>
-                <property name="visible">True</property>
-                <property name="app_paintable">True</property>
-                <property name="can_focus">True</property>
-                <property name="can_default">True</property>
-                <property name="receives_default">True</property>
-                <property name="tooltip_text" translatable="yes">quit me</property>
-                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
-                <style>
-                  <class name="quit-button"/>
-                </style>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">4</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">3</property>
-          </packing>
-        </child>
-        <child>
-          <placeholder/>
+            </object>
         </child>
         <style>
-          <class name="main-layout"/>
+            <class name="main-window" />
         </style>
-      </object>
-    </child>
-  </object>
+    </object>
 </interface>
